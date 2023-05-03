@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Data || User</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logoSekolah.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/detail.css">
+    <link rel="shortcut icon" href="foto/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -16,13 +16,12 @@
 
     <div class="btnCreate" style="margin-bottom: 10px;">
         <button>
-            <a style="color: black; text-decoration: none;" href="create.php">Tambah Data Siswa</a>
+            <a style="text-decoration: none;" href="create.php">Tambah Data Siswa</a>
         </button>
     </div>
 
-    <table cellspacing="3" border="1" cellpadding="0" colspan="3" width="100%" style="">
-
-        <thead style="background-color: aquamarine;">
+    <table cellspacing="3" border="1" cellpadding="0" colspan="3" width="100%">
+        <thead>
             <th rowspan="4">No</th>
             <th rowspan="4">Id</th>
             <th rowspan="4">Username</th>
@@ -42,7 +41,7 @@
                 <td>
                     <?= $fetch['id']; ?>
                 </td>
-                <td>
+                <td class="nama">
                     <?= $fetch['username']; ?>
                 </td>
                 <td>
@@ -52,13 +51,13 @@
                 <td align="center"><img style="width: 150px; " src="foto/<?= $fetch['foto']; ?>"
                         alt="<?= $fetch['foto'] ?>">
                 </td>
-                <td align="center"><a style="color: #FFBF00; text-decoration: none;"
-                        href="update.php?id=<?php echo $fetch['id']; ?>">edit</a>
+                <td class="edit" name="edit" align="center"><a style="color: #DAA520; text-decoration: none;"
+                        href="update.php?id=<?php echo $fetch['id']; ?>">EDIT</a>
                 </td>
-                <td name="hapus" value="hapus" align="center"><a
+                <td class="delete" name="hapus" value="hapus" align="center"><a
                         onclick="return confirm('Apa anda sudah yakin?, data akan dihapus permanen')"
                         style="color: red; text-decoration: none;"
-                        href="delete.php?id=<?php echo $fetch['id']; ?>">delete</a>
+                        href="delete.php?id=<?php echo $fetch['id']; ?>">DELETE</a>
                 </td>
             </tr>
 

@@ -17,6 +17,8 @@ if ($rowcount > 0) {
     header("Location: detail.php");
 } else {
     echo $error;
+    echo "<br>";
+    echo "<a href='index.php'>Kembali</a>";
 }
 
 ?>

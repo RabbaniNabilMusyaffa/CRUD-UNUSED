@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Tambah Data</title>
-    <link rel="shortcut icon" href="logoSekolah.png" type="image/x-icon">
-    <link rel="stylesheet" href="create.css">
+    <link rel="shortcut icon" href="foto/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/create.css">
 </head>
 
 <body>
@@ -50,7 +50,7 @@
 
     <div>
         <button style="position: absolute; bottom: 0; margin-bottom: 20px; width: 100px; margin-left: 15px;">
-            <a href="index.php" style="color: red; text-decoration: none;">Kembali</a>
+            <a href="detail.php" style="color: red; text-decoration: none;">Kembali</a>
         </button>
     </div>
 </body>

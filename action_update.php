@@ -15,9 +15,11 @@ if (isset($_POST['update'])) {
 
     if ($data) {
         echo "Data berhasil ditambahkan";
-        echo "<a href='index.php'>Lihat</a>";
+        echo "<br>";
+        echo "<a href='detail.php'>Lihat</a>";
     } else {
         echo "Data gagal ditambahkan";
+        echo "<br>";
         echo "<a href='update.php'>Kembali</a>";
     }
 }

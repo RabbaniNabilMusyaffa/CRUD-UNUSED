@@ -3,7 +3,8 @@
 
 <head>
 	<title>Login Page</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="CSS/login.css">
+	<link rel="shortcut icon" href="foto/favicon.ico" type="image/x-icon">
 </head>
 
 <body>

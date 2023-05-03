@@ -1,0 +1,78 @@
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin-top: 35px;
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: center;
+}
+
+table td {
+  background-color: aquamarine;
+}
+
+.nama:hover {
+  color: blue;
+}
+
+table th {
+  background-color: skyblue;
+}
+
+table td img {
+  width: 150px;
+}
+
+table td [name="edit"] {
+  color: #ffbf00;
+  text-decoration: none;
+}
+
+.edit:hover {
+  text-decoration: underline;
+}
+
+.delete:hover {
+  text-decoration: underline;
+}
+
+table td[name="hapus"] a {
+  color: red;
+}
+
+.btnCreate {
+  margin-bottom: 10px;
+}
+
+.btnCreate button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btnCreate button a {
+  color: black;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+
+.btnCreate button:hover {
+  background-color: #3e8e41;
+}
