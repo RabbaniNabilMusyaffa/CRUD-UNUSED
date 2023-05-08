@@ -10,15 +10,16 @@ $error = "Username atau password salah. Silakan coba lagi.";
 
 $sql = "SELECT * FROM siswa WHERE username='$user' AND password='$pass'";
 $result = mysqli_query($conn, $sql);
+$show = mysqli_fetch_array($result);
 $rowcount = mysqli_num_rows($result);
 
 if ($rowcount > 0) {
-    $_SESSION['username'] = $username;
+    $_SESSION['username'] = $user;
+    $_SESSION['id'] = $show['id'];
     header("Location: detail.php");
 } else {
     echo $error;
-    echo "<br>";
-    echo "<a href='index.php'>Kembali</a>";
 }
+
 
 ?>

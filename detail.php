@@ -8,18 +8,17 @@
     <title>Page Data || User</title>
     <link rel="stylesheet" href="CSS/detail.css">
     <link rel="shortcut icon" href="foto/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
-
-    <h1 style="text-align: center;">Data Siswa</h1>
-
-    <div class="btnCreate" style="margin-bottom: 10px;">
-        <button>
-            <a style="text-decoration: none;" href="create.php">Tambah Data Siswa</a>
-        </button>
-    </div>
-
+    <nav>
+        <div class="navbar-title">Detail Data Siswa</div>
+        <div class="navbar-buttons">
+            <a class="btnCreate" href="create.php">Tambah Data Siswa</a>
+            <a class="btnLogout" href="logout.php">Log out</a>
+        </div>
+    </nav>
     <table cellspacing="3" border="1" cellpadding="0" colspan="3" width="100%">
         <thead>
             <th rowspan="4">No</th>
@@ -30,6 +29,7 @@
             <th rowspan="4" colspan="2">Aksi</th>
         </thead>
         <?php
+        include "sessionCheck.php";
         include "conn.php";
         $no = 1;
         $data = mysqli_query($conn, "SELECT * FROM siswa");
@@ -48,15 +48,13 @@
                     <?= $fetch['password']; ?>
                 </td>
 
-                <td align="center"><img style="width: 150px; " src="foto/<?= $fetch['foto']; ?>"
-                        alt="<?= $fetch['foto'] ?>">
+                <td align="center"><img style="width: 150px; border-radius: 50px; border: 5px solid #6495ED;"
+                        src="foto/<?= $fetch['foto']; ?>" alt="<?= $fetch['foto'] ?>">
                 </td>
-                <td class="edit" name="edit" align="center"><a style="color: #DAA520; text-decoration: none;"
-                        href="update.php?id=<?php echo $fetch['id']; ?>">EDIT</a>
+                <td name="edit" align="center"><a class="edit" href="update.php?id=<?php echo $fetch['id']; ?>">EDIT</a>
                 </td>
-                <td class="delete" name="hapus" value="hapus" align="center"><a
+                <td name="hapus" value="hapus" align="center"><a class="delete"
                         onclick="return confirm('Apa anda sudah yakin?, data akan dihapus permanen')"
-                        style="color: red; text-decoration: none;"
                         href="delete.php?id=<?php echo $fetch['id']; ?>">DELETE</a>
                 </td>
             </tr>
@@ -67,4 +65,4 @@
     </table>
 </body>
 
-</html
+</html>

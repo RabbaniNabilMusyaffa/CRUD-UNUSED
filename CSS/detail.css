@@ -1,7 +1,5 @@
 h1 {
   text-align: center;
-  font-family: Arial, sans-serif;
-  color: #333;
 }
 
 table {
@@ -33,46 +31,82 @@ table td img {
   width: 150px;
 }
 
-table td [name="edit"] {
-  color: #ffbf00;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: skyblue;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.navbar-buttons {
+  display: flex;
+}
+
+.navbar-buttons a {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
   text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #daa520;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 .edit:hover {
-  text-decoration: underline;
+  background-color: black;
+  color: #daa520;
+}
+
+.delete {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: red;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 .delete:hover {
-  text-decoration: underline;
-}
-
-table td[name="hapus"] a {
+  background-color: black;
   color: red;
 }
 
-.btnCreate {
-  margin-bottom: 10px;
-}
-
-.btnCreate button {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  text-align: center;
+.navbar-buttons .btnLogout {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: red;
+  color: #fff;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
-.btnCreate button a {
-  color: black;
-  font-family: Arial, sans-serif;
-  text-decoration: none;
+.navbar-buttons a:hover {
+  background-color: whitesmoke;
+  color: green;
 }
 
-.btnCreate button:hover {
-  background-color: #3e8e41;
+.navbar-buttons .btnLogout:hover {
+  background-color: gray;
+  color: maroon;
 }
